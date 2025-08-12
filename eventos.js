@@ -6,5 +6,11 @@ document.addEventListener('DOMContentLoaded', function() {
     el_div.addEventListener('click', function() {
       alert('Hola! Soy el div');
     });
+    const btn = el_div.querySelector('button');
+    if (btn) {
+      btn.addEventListener('click', function(event) {
+        event.stopPropagation();
+      });
+    }
   }
 });
